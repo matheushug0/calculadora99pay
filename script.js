@@ -77,8 +77,8 @@ button.addEventListener("click", () => {
   <div class="p-2 lead"><p>Total - após um mês: </p></div>
   <div class="p-2">
   <div class="input-group mb-2">
-  <span class="input-group-text">$</span>
-  <input type="text" class="form-control" value="${new Intl.NumberFormat(
+  <span class="input-group-text p-3">R$</span>
+  <input type="text" class="form-control p-3" value="${new Intl.NumberFormat(
     "pt-BR",
     {
       style: "currency",
@@ -92,8 +92,8 @@ button.addEventListener("click", () => {
 <div class="p-2 lead"><p>Total - após um ano: </p></div>
 <div class="p-2">
 <div class="input-group mb-2">
-<span class="input-group-text">$</span>
-<input type="text" class="form-control" value="${new Intl.NumberFormat(
+<span class="input-group-text p-3">R$</span>
+<input type="text" class="form-control p-3" value="${new Intl.NumberFormat(
     "pt-BR",
     {
       style: "currency",
@@ -108,8 +108,8 @@ button.addEventListener("click", () => {
 <div class="p-2 lead"><p>Rendimento diário: </p></div>
 <div class="p-2">
 <div class="input-group mb-2">
-<span class="input-group-text">$</span>
-<input type="text" class="form-control" value="${new Intl.NumberFormat(
+<span class="input-group-text p-3">R$</span>
+<input type="text" class="form-control p-3" value="${new Intl.NumberFormat(
     "pt-BR",
     {
       style: "currency",
@@ -124,8 +124,8 @@ button.addEventListener("click", () => {
 <div class="p-2 lead"><p>Rendimento mensal (Acumulado): </p></div>
 <div class="p-2">
 <div class="input-group mb-2">
-<span class="input-group-text">$</span>
-<input type="text" class="form-control" value="${new Intl.NumberFormat(
+<span class="input-group-text p-3">R$</span>
+<input type="text" class="form-control p-3" value="${new Intl.NumberFormat(
     "pt-BR",
     {
       style: "currency",
