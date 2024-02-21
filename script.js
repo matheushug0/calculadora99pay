@@ -64,7 +64,11 @@ button.addEventListener("click", () => {
   console.log(InvestimentoInicial);
   console.log(typeof InvestimentoInicial);
   if (!InvestimentoInicial) {
-    alert("Valor Inválido.");
+    const myModal = new bootstrap.Modal("#exampleModal", {
+      keyboard: false,
+    });
+    const modalToggle = document.getElementById("exampleModal");
+    myModal.show(modalToggle);
     return;
   }
   console.log(InvestimentoInicial);
