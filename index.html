@@ -14,6 +14,11 @@
     <link rel="shortcut icon" href="https://99app.com/wp-content/themes/99app/assets/img/favicon.ico" type="image/x-icon">
   </head>
   <body class="bg-warning container">
+    <div class="banner-iframe-selector">
+      <div class="banner-iframe" data-src="https://ad.a-ads.com/2166128?size=300x250" data-max-width="467"></div>
+      <div class="banner-iframe" data-src="https://ad.a-ads.com/1?size=728x90"></div>
+  </div>
+  <iframe data-aa='2304940' src='//acceptable.a-ads.com/2304940' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe>
     <header>
       <div class="container p-3">
         <div
@@ -126,7 +131,40 @@
     <!-- Script do site -->
     <script src="./script.js"></script>
     <!-- Script Adsense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0141075238722554"
-     crossorigin="anonymous"></script>
+    
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const addIframe = (src, width, height, aa) => {
+          const iframe = Object.assign(document.createElement('iframe'), {
+              src, width, height, frameBorder: 0
+          });
+          iframe.setAttribute('data-aa', aa);
+          return iframe;
+      };
+
+      const updateBanner = () => {
+          const bannerDivs = document.querySelectorAll('.banner-iframe-selector .banner-iframe');
+          bannerDivs.forEach(div => div.style.display = 'none');
+
+          for (const div of bannerDivs) {
+              const maxWidth = parseInt(div.getAttribute('data-max-width'));
+              const src = div.getAttribute('data-src');
+              const aaMatch = src?.match(/\/(\d+)\?/), sizeMatch = src?.match(/size=(\d+)x(\d+)/);
+
+              if (aaMatch && sizeMatch && (window.innerWidth <= maxWidth || !maxWidth)) {
+                  const [_, aa] = aaMatch, [__, width, height] = sizeMatch;
+                  div.innerHTML = '';
+                  div.appendChild(addIframe(src, width, height, aa));
+                  div.style.display = 'block';
+                  break;
+              }
+          }
+      };
+
+      updateBanner();
+      window.addEventListener('resize', updateBanner);
+  });
+
+</script>
   </body>
 </html>
