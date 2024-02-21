@@ -73,7 +73,7 @@ button.addEventListener("click", () => {
 
   content.innerHTML = `
   <div class="container bg-light rounded p-3 mt-3">
-  <div class="d-flex flex-row mb-2">
+  <div class="d-flex flex-row mb-2 align-items-center">
   <div class="p-2 lead"><p>Total - após um mês: </p></div>
   <div class="p-2">
   <div class="input-group mb-2">
@@ -88,7 +88,7 @@ button.addEventListener("click", () => {
 </div>
   </div>
 </div>
-<div class="d-flex flex-row mb-2">
+<div class="d-flex flex-row mb-2 align-items-center">
 <div class="p-2 lead"><p>Total - após um ano: </p></div>
 <div class="p-2">
 <div class="input-group mb-2">
@@ -104,7 +104,7 @@ button.addEventListener("click", () => {
 </div>
 </div>
 
-<div class="d-flex flex-row mb-2">
+<div class="d-flex flex-row mb-2 align-items-center">
 <div class="p-2 lead"><p>Rendimento diário: </p></div>
 <div class="p-2">
 <div class="input-group mb-2">
@@ -120,7 +120,7 @@ button.addEventListener("click", () => {
 </div>
 </div>
 
-<div class="d-flex flex-row mb-2">
+<div class="d-flex flex-row mb-2 align-items-center">
 <div class="p-2 lead"><p>Rendimento mensal (Acumulado): </p></div>
 <div class="p-2">
 <div class="input-group mb-2">
