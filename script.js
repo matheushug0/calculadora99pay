@@ -58,8 +58,26 @@ function calcularRendimentoAnual() {
   }
 }
 
+function formatCurrency(input) {
+  //Removendo caracteres não numéricos
+  let value = input.value.replace(/\D/g, "");
+  // Verifica se o valor é vazio
+  if (value === "") {
+    input.value = "";
+    return;
+  }
+  //formatando para monetário
+  value = (parseFloat(value) / 100).toFixed(2);
+  //atualizando campo do input
+  input.value = formatNumber(value);
+}
+
+function formatNumber(number) {
+  return number.replace(".", ",").replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
 button.addEventListener("click", () => {
-  let inputConv = input.value.replace(",", ".");
+  let inputConv = parseFloat(input.value.replace(/\./g, "").replace(/,/g, "."));
   InvestimentoInicial = Number(inputConv);
   console.log(InvestimentoInicial);
   console.log(typeof InvestimentoInicial);
