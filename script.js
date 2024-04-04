@@ -43,8 +43,8 @@ function calcularRendimentoAnual() {
   RendimentoANUAL = 0;
   for (let i = 0; i <= 365; i++) {
     if (InvestimentoInicialCount_A >= 5000) {
-      RendimentoCDI_A = 500 * (CdiMensal / 30) * 1.1;
-      Restante_A = InvestimentoInicial - 500;
+      RendimentoCDI_A = 5000 * (CdiMensal / 30) * 1.1;
+      Restante_A = InvestimentoInicial - 5000;
       RestanteCDI_A = Restante_A * (CdiMensal / 30) * (CdiMensal * 0.8);
       RendimentoTOTAL_A = RestanteCDI_A + RendimentoCDI_A;
       InvestimentoInicialCount_A += RendimentoTOTAL_A;
