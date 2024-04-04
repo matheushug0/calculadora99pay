@@ -1,4 +1,4 @@
-const CdiMensal = 0.0085;
+const CdiMensal = 0.008875;
 
 let button = document.getElementById("Calcular");
 let input = document.getElementById("initialInvestiment");
@@ -22,15 +22,15 @@ function calcularRendimentoMensal() {
   InvestimentoInicialCount_M = InvestimentoInicial;
   RendimentoMENSAL = 0;
   for (let i = 0; i <= 30; i++) {
-    if (InvestimentoInicialCount_M >= 500) {
-      RendimentoCDI_M = 500 * (CdiMensal / 30) * 2.2;
-      Restante_M = InvestimentoInicial - 500;
-      RestanteCDI_M = Restante_M * (CdiMensal / 30) * 1.0;
+    if (InvestimentoInicialCount_M >= 5000) {
+      RendimentoCDI_M = 5000 * (CdiMensal / 30) * 1.1;
+      Restante_M = InvestimentoInicial - 5000;
+      RestanteCDI_M = Restante_M * (CdiMensal / 30) * (CdiMensal * 0.8);
       RendimentoTOTAL_M = RestanteCDI_M + RendimentoCDI_M;
       InvestimentoInicialCount_M += RendimentoTOTAL_M;
       RendimentoMENSAL += RendimentoTOTAL_M;
     } else {
-      RendimentoCDI_M = InvestimentoInicialCount_M * (CdiMensal / 30) * 2.2;
+      RendimentoCDI_M = InvestimentoInicialCount_M * (CdiMensal / 30) * 1.1;
       RendimentoTOTAL_M = RendimentoCDI_M;
       InvestimentoInicialCount_M += RendimentoTOTAL_M;
       RendimentoMENSAL += RendimentoTOTAL_M;
@@ -42,15 +42,15 @@ function calcularRendimentoAnual() {
   InvestimentoInicialCount_A = InvestimentoInicial;
   RendimentoANUAL = 0;
   for (let i = 0; i <= 365; i++) {
-    if (InvestimentoInicialCount_A >= 500) {
-      RendimentoCDI_A = 500 * (CdiMensal / 30) * 2.2;
+    if (InvestimentoInicialCount_A >= 5000) {
+      RendimentoCDI_A = 500 * (CdiMensal / 30) * 1.1;
       Restante_A = InvestimentoInicial - 500;
-      RestanteCDI_A = Restante_A * (CdiMensal / 30) * 1.0;
+      RestanteCDI_A = Restante_A * (CdiMensal / 30) * (CdiMensal * 0.8);
       RendimentoTOTAL_A = RestanteCDI_A + RendimentoCDI_A;
       InvestimentoInicialCount_A += RendimentoTOTAL_A;
       RendimentoANUAL += RendimentoTOTAL_A;
     } else {
-      RendimentoCDI_A = InvestimentoInicialCount_A * (CdiMensal / 30) * 2.2;
+      RendimentoCDI_A = InvestimentoInicialCount_A * (CdiMensal / 30) * 1.1;
       RendimentoTOTAL_A = RendimentoCDI_A;
       InvestimentoInicialCount_A += RendimentoTOTAL_A;
       RendimentoANUAL += RendimentoTOTAL_A;
