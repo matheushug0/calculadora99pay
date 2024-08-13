@@ -5,13 +5,13 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     try {
       // Substitua a URL abaixo pela URL que você deseja fazer scraping
-      const url = "https://example.com";
+      const url = "https://www.melhorcambio.com/cdi";
       const response = await axios.get(url);
       const html = response.data;
       const $ = cheerio.load(html);
 
       // Substitua o seletor abaixo pelo seletor do elemento que você deseja extrair
-      const data = $("#element-id").text();
+      const data = $("#inp-mes").value;
 
       res.status(200).json({ data });
     } catch (error) {
