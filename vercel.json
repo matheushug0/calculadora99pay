@@ -4,5 +4,10 @@
   "framework": null,
   "installCommand": null,
   "buildCommand": "",
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "functions": {
+    "api/scrape.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }
