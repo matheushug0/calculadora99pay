@@ -1,4 +1,11 @@
 {
+  "name": "calculadora99pay",
+  "version": "2.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test epecified\" && exit 1"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
