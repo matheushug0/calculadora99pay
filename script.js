@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 
-async function calc() {
+async function getValueFromWebsite() {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   const searchUrl = `https://www.melhorcambio.com/cdi`;
@@ -21,4 +21,4 @@ async function calc() {
   return num;
 }
 
-calc();
+module.exports = getValueFromWebsite;
