@@ -1,9 +1,9 @@
 const express = require("express");
-const cors = require("cors"); // Importa o CORS
+//const cors = require("cors"); // Importa o CORS
 const getValueFromWebsite = require("../script"); // Importa o script Puppeteer
 
 const app = express();
-app.use(cors()); // Habilita CORS para todas as requisições
+//app.use(cors()); // Habilita CORS para todas as requisições
 
 app.get("/getValue", async (req, res) => {
   try {
