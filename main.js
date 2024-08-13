@@ -5,6 +5,7 @@ async function fetchValue() {
   try {
     const response = await fetch("http://localhost:3000/getValue");
     const data = await response.json();
+    console.log(data);
     res = data.value;
     console.log(data.value);
   } catch (error) {
