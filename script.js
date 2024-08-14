@@ -3,9 +3,8 @@ const puppeteer = require("puppeteer");
 async function getValueFromWebsite() {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
-  const searchUrl = `https://www.melhorcambio.com/cdi`;
+  const searchUrl = `https://puppeteer-render-qb42.onrender.com/api`;
   await page.goto(searchUrl);
-  //await page.screenshot({ path: "example.png" });
 
   const result = await page.evaluate(() => {
     return document.querySelector("#inp-mes").value;
