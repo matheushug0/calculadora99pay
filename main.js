@@ -3,11 +3,15 @@ let CdiMensal;
 
 async function fetchValue() {
   try {
-    const response = await fetch("http://localhost:3000/getValue");
-    const data = await response.json();
+    const response = await fetch(
+      "https://puppeteer-render-qb42.onrender.com/api"
+    );
+    const data = await response.text();
     console.log(data);
-    res = data.value;
-    console.log(data.value);
+    let numStr = data.replace(/[^0-9,]/g, "").replace(",", ".");
+    let num = parseFloat(numStr);
+    res = num;
+    console.log(res);
   } catch (error) {
     console.log("Erro");
   }
