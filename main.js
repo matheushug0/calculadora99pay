@@ -1,25 +1,8 @@
 let res;
 let CdiMensal;
 
-async function fetchValue() {
-  try {
-    const response = await fetch(
-      "https://puppeteer-render-qb42.onrender.com/api"
-    );
-    const data = await response.text();
-    console.log(data);
-    let numStr = data.replace(/[^0-9,]/g, "").replace(",", ".");
-    let num = parseFloat(numStr);
-    res = num;
-    console.log(res);
-  } catch (error) {
-    console.log("Erro");
-  }
-}
-
 document.addEventListener("DOMContentLoaded", async () => {
-  await fetchValue();
-  CdiMensal = res / 100;
+  CdiMensal = 0.91 / 100;
   console.log("CdiMensal:", CdiMensal);
 
   const placeholders = document.querySelectorAll(".placeholder");
