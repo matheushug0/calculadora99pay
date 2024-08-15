@@ -1,4 +1,4 @@
-const express = require("express");
+/* const express = require("express");
 const getValueFromWebsite = require("../script"); // Importa o script Puppeteer
 
 const app = express();
@@ -17,3 +17,4 @@ app.listen(3000, () => {
 });
 
 module.exports = app;
+ */
