@@ -10,6 +10,7 @@
 <img src="./images/1.jpg">
 
 
+
 - O deploy do projeto no Vercel foi indexado no Google
 
 <img src="./images/2.jpg">
