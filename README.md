@@ -3,7 +3,7 @@
 </p>
 
 # Calculadora de Investimentos - 99Pay
-- Projeto de uma Calculadora de rendimentos baseado no cálculo de juros do CDI sobre o valor investido na cateira do [99Pay](https://99app.com/99pay/).
+- Projeto de uma Calculadora de rendimentos baseado no cálculo de juros do CDI sobre o valor investido na carteira do [99Pay](https://99app.com/99pay/).
 
 ### [Link do Projeto no Vercel](https://calculadora99pay.vercel.app/)
 
