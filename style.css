@@ -1,0 +1,13 @@
+.note-banner{
+    background-color: #161616;
+    height: fit-content;
+    color: white;
+
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.note-banner p {
+    font-size: 18px;
+    padding: 10px;
+}
