@@ -7,7 +7,44 @@
     border-radius: 10px;
 }
 
+.bg-yellow {
+    background-color: #FFDD00;
+}
+
 .note-banner p {
     font-size: 18px;
     padding: 10px;
+}
+
+#Calcular,#Promotion {
+    background-color: #E45D01;
+    opacity: 0.9;
+    font-weight: bold;
+    justify-content: center;
+}
+
+#Calcular,#Promotion:hover {
+    opacity: 1;
+    transition: 200ms ease-in-out;
+    box-shadow: unset #FFDD00;
+}
+
+img {
+    width: fit-content;
+    height: fit-content;
+}
+
+.footer-bg{
+    background-color: #1A1B1A;
+}
+
+.footer-bg a {
+    color: white;
+}
+
+@media (max-width: 575.98px) { 
+    .promo{
+        display: flex;
+        flex-direction: column;
+    }
 }
