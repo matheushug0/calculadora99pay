@@ -29,6 +29,16 @@
     box-shadow: unset #FFDD00;
 }
 
+.opacity {
+    opacity: 0.9;
+    transition: 200ms ease-in-out;
+}
+
+.opacity:hover {
+    opacity: 1;
+    transition: 200ms ease-in-out;
+}
+
 img {
     width: fit-content;
     height: fit-content;
